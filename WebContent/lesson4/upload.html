@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>文件上传：</h3>
+	请选择要上传的文件：
+	<br />
+	<!-- 表单 method=post 
+			entype是用于设置上传的参数的编码格式（application/x-www-form-urlencoded或者multipart/form-data）
+			application/x-www-form-urlencoded（默认值）不能上传文件 ？键=值&键1=值1
+			multipart/form-data     可以上传文件
+			上传文件 是在请求body中 通过特殊分割符分割
+			分隔符（Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryChnoF7TrKiq4HVll）
+			
+	 -->
+	<form action="../upload" method="post" enctype="multipart/form-data">
+		 <input type="text" name="myfile" size="50" /> <br/> 
+		<br/> 
+		<input type="file" name="file"size="50" />   <br/>
+		 <br/> 
+		 <input type="file" name="file" size="50" /> <br/> 
+		 <br/>
+		<input type="submit"value="上传文件" />
+	</form>
+	<a href="../download">下载</a>
+</body>
+</html>
